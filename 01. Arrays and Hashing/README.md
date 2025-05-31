@@ -5,8 +5,6 @@
 **Description**
 Given an integer array `nums`, return `True` if any value appears more than once in the array, and return `False` if every element is distinct.
 
----
-
 ## Examples
 
 **Example 1**
@@ -16,8 +14,6 @@ Output: `True`
 **Example 2**
 Input: `nums = [1, 2, 3, 4]`
 Output: `False`
-
----
 
 ## Approach 1: Brute Force
 
@@ -34,8 +30,6 @@ def contains_duplicate_brute_force(nums):
 **Explanation**
 এই পদ্ধতিতে আমরা প্রতিটি উপাদানের জন্য তার পরবর্তী উপাদানগুলোর সাথে তুলনা করি। যদি কোনো দুটি উপাদান একসাথে মিলে যায়, তবে আমরা `True` রিটার্ন করি। যদি পুরো লিস্ট স্ক্যান করার পরও কোনো মিল না পাই, তাহলে `False` রিটার্ন করি। এই পদ্ধতির টাইম কমপ্লেক্সিটি হচ্ছে `O(n^2)` এবং এটি ছোট ইনপুটের জন্য কাজ করে, কিন্তু বড় ইনপুটে ধীরগতির হয়।
 
----
-
 ## Approach 2: Using Sorting
 
 ```python
@@ -49,8 +43,6 @@ def contains_duplicate_sort(nums):
 
 **Explanation**
 এই পদ্ধতিতে আমরা প্রথমে অ্যারেটি sort করি যাতে একই উপাদানগুলো পরপর থাকে। এরপর প্রতিটি উপাদান তার আগের উপাদানের সাথে তুলনা করি। যদি কোনো দুইটি উপাদান সমান হয়, তাহলে `True` রিটার্ন করি। না হলে `False` রিটার্ন করি। এই পদ্ধতির টাইম কমপ্লেক্সিটি `O(n log n)` যা আগের তুলনায় দ্রুত।
-
----
 
 ## Approach 3: Using Hash Table (Set)
 
@@ -66,8 +58,6 @@ def contains_duplicate_hash(nums):
 
 **Explanation**
 এই পদ্ধতিতে আমরা একটি খালি `set` তৈরি করি এবং প্রতিটি উপাদানকে সেটিতে রাখার চেষ্টা করি। যদি কোনো উপাদান সেটিতে আগেই থাকে, তাহলে আমরা বুঝি এটি ডুপ্লিকেট এবং `True` রিটার্ন করি। অন্যথায়, সেটিতে উপাদানটি যোগ করি। এটি সবচেয়ে কার্যকর পদ্ধতি কারণ এটি `O(n)` সময়ে চলে এবং বড় ডেটার ক্ষেত্রেও দ্রুত কাজ করে।
-
----
 
 ## Summary
 
